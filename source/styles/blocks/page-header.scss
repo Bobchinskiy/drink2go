@@ -6,11 +6,12 @@ align-items: center;
 
 @include media-mobile {
   width: 280px;
-  padding: 12px 20px 0 20px;
+  padding: 10px 20px 0 20px;
 }
 }
 
 .page-header__logo-wrapper {
+  margin-top: 2px;
   margin-right: 110px;
 }
 

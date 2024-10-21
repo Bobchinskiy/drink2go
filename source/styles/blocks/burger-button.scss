@@ -1,0 +1,29 @@
+.burger-button {
+    background-color: $baseblack;
+    border: none;
+    width: 16px;
+    height: 2px;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        width: 16px;
+        height: 2px;
+        position: relative;
+        display: block;
+        background-color: $baseblack;
+        top: 4px;
+        right: 6px;
+    }
+
+    &::after {
+        content: '';
+        width: 16px;
+        height: 2px;
+        position: relative;
+        display: block;
+        background-color: $baseblack;
+        bottom: 9px;
+        right: 6px;
+    }
+}
