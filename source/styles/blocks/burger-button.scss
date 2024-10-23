@@ -1,33 +1,26 @@
 .burger-button {
-    background-color: $baseblack;
-    border: none;
-    width: 16px;
-    height: 2px;
-    cursor: pointer;
+  display: block;
+  padding: 22px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+  background-image: url("../../icons/stack.svg#burger");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
-    &::before {
-        content: '';
-        width: 16px;
-        height: 2px;
-        position: relative;
-        display: block;
-        background-color: $baseblack;
-        top: 4px;
-        right: 6px;
-    }
+  &:active {
+    background-color: $basesecondary;
+  }
 
-    &::after {
-        content: '';
-        width: 16px;
-        height: 2px;
-        position: relative;
-        display: block;
-        background-color: $baseblack;
-        bottom: 9px;
-        right: 6px;
-    }
+  @include media-tablet {
+    display: none;
+  }
+}
 
-    @include media-tablet {
-        display: none;
-    }
+.burger-button--cross {
+  background-image: url("../../icons/stack.svg#cross");
 }

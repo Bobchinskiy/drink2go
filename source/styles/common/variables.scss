@@ -1,25 +1,20 @@
 /* здесь используйте глобальные переменные */
 $tablet-width:768;
-$desktop-width:1440;
+$desctop-width:1440;
 
-// base colors
+/* colors */
+$basewhite: #ffffff;
+$basegray: #bdbdbd;
+$baseblack: #333333;
+$baseprimary: #7859cf;
+$basesecondary: #f0ebff;
 
-$basewhite:#ffffff;
-$basegrey:#bdbdbd;
-$baseblack:#333333;
-$baseprimary:#7859cf;
-$basesecondary:#f0ebff;
+$primaryopacity: rgba(120, 89, 207, 0.25);
+$primarylighter: #9070ec;
+$primarydarker: #593cac;
 
-// alt colors
-
-$primaryopacity:rgba(120, 89, 207, 0.25);
-$primarylighter:#9070ec;
-$primarydarker:#593cac;
-$primarydarker:#e2e2e2;
-
-// backgrounds colors
-
-$lightestgrey:#f8f8f8;
-$flatwhite:#f3ebe1;
-$lavenderlatte:#eae6fc;
-$espresso:#e5e6e8;
+$lightgray: #e2e2e2;
+$lightestgrey: #f8f8f8;
+$flatwhite: #f3ebe1;
+$lavenderlatte: #eae6fc;
+$espresso: #e5e6e8;

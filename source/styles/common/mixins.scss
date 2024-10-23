@@ -1,21 +1,3 @@
-@mixin media-tablet {
-  @media (min-width: $tablet-width) {
-    @content;
-  }
-}
-
-@mixin media-desktop {
-  @media (min-width: desktop-width) {
-    @content;
-  }
-}
-
-@mixin media-mobile {
-  @media (max-width: 767) {
-    @content;
-  }
-}
-
 @mixin font-face($font-family, $font-weight, $font-style, $font-src-woff, $font-src-woff2) {
   @font-face {
     font-family: $font-family;
@@ -23,5 +5,23 @@
     font-style: $font-style;
     font-display: swap;
     src: $font-src-woff2, $font-src-woff;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-desctop {
+  @media (min-width: $desctop-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: ($tablet-width - 1)) {
+    @content;
   }
 }
