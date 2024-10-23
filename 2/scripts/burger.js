@@ -1,0 +1,1 @@
+window.addEventListener("load",()=>{let e=document.querySelector(".burger-button"),t=document.querySelector(".navigation__list");e.addEventListener("click",()=>{t.classList.toggle("navigation__list--open")})});
