@@ -3,16 +3,27 @@
 display: flex;
 flex-wrap: wrap;
 align-items: center;
+justify-content: center;
 
 @include media-mobile {
   width: 280px;
   padding: 10px 20px 0 20px;
+  margin: 0 auto;
+}
+
+@include media-tablet {
+  width: 728px;
+  margin: 0 auto;  
 }
 }
 
 .page-header__logo-wrapper {
   margin-top: 2px;
   margin-right: 110px;
+
+  @include media-tablet {
+    
+  }
 }
 
 .page-header__logo-text {

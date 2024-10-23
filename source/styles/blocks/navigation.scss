@@ -13,6 +13,12 @@
   top: 60;
   left: 130;
    }
+
+  @include media-tablet {
+    display: flex;
+    position: relative;
+
+  }
 }
 
 .navigation__list-item {

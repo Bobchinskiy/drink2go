@@ -26,4 +26,8 @@
         bottom: 9px;
         right: 6px;
     }
+
+    @include media-tablet {
+        display: none;
+    }
 }
