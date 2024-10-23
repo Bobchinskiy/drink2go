@@ -1,0 +1,229 @@
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 60px;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  @include media-desctop {
+    margin-right: 162px;
+    gap: 20px;
+    max-width: 470px;
+  }
+}
+
+.navigation__list--active {
+  @include media-mobile {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: $basewhite;
+  }
+}
+
+.navigation__list-item {
+  display: flex;
+}
+
+.navigation__icons-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 180px;
+
+  @include media-tablet {
+    max-width: 180px;
+  }
+
+  @include media-desctop {
+    gap: 20px;
+    max-width: 400px;
+  }
+}
+
+.navigation__link {
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 31px 20px;
+  text-transform: uppercase;
+  color: $baseblack;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+
+  &:hover,
+  &:focus {
+    color: $baseprimary;
+  }
+
+  &:active {
+    background-color: $basesecondary;
+  }
+
+  @include media-desctop {
+    padding: 31px 21px;
+  }
+}
+
+.navigation__link--active {
+  color: $baseprimary;
+  border-bottom: 2px solid $baseprimary;
+}
+
+.navigation__list--active .navigation__link:active {
+  @include media-mobile {
+    color: $baseblack;
+  }
+}
+
+.navigation__list--active .navigation__link:first-child {
+  @include media-mobile {
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 1px;
+      width: 100vw;
+      transform: translateX(-50vw);
+      background-color: $basesecondary;
+    }
+  }
+}
+
+.navigation__list--active .navigation__link {
+  @include media-mobile {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 21px;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      height: 1px;
+      width: 100vw;
+      transform: translateX(-50vw);
+      background-color: $basesecondary;
+    }
+  }
+}
+
+.navigation__list--active .navigation__link--active {
+  @include media-mobile {
+    border: none;
+  }
+}
+
+.navigation__icons-item-link {
+  display: block;
+  padding: 22px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $baseblack;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: $baseprimary;
+  }
+
+  &:active {
+    background-color: $basesecondary;
+  }
+
+  @include media-tablet {
+    height: 80px;
+    padding: 32px 22px;
+  }
+
+  @include media-desctop {
+    width: auto;
+    display: flex;
+    gap: 8px;
+    padding: 32px 20px;
+  }
+}
+
+.navigation__icons-item-link--login::before {
+  content: " ";
+  display: block;
+  mask-image: url("../../icons/stack.svg#user");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 16px 16px;
+  background-color: $baseblack;
+  height: 16px;
+  width: 16px;
+
+  &:hover {
+    background-color: $baseprimary;
+  }
+}
+
+.navigation__icons-item-link--busket::before {
+  content: " ";
+  display: block;
+  mask-image: url("../../icons/stack.svg#basket");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 16px 16px;
+  background-color: $baseblack;
+  height: 16px;
+  width: 16px;
+}
+
+.navigation__icons-item-link--busket:hover {
+  &::before {
+    background-color: $baseprimary;
+  }
+}
+
+.navigation__icons-item-link--login:hover {
+  &::before {
+    background-color: $baseprimary;
+  }
+}
+
+.navigation__icons-item-link--busket:active,
+.navigation__icons-item-link--login:active {
+  &::before {
+    background-color: $baseblack;
+
+    @include media-tablet {
+      background-color: $baseprimary;
+    }
+  }
+}
+
+.navigation__icons-item-text {
+  display: none;
+
+  @include media-desctop {
+    display: block;
+  }
+}

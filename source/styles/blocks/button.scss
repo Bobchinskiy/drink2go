@@ -1,0 +1,47 @@
+.button {
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: $baseprimary;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basewhite;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+  background-color: $primarylighter;
+}
+
+.button:active {
+  background-color: $primarydarker;
+}
+
+.button:disabled {
+  background-color: $basegray;
+}
+
+.button--buy {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.button--buy::before {
+  content: " ";
+  display: inline-block;
+  background-image: url("../../icons/stack.svg#busket-product");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.button--order {
+  min-width: 113px;
+  text-align: center;
+}
